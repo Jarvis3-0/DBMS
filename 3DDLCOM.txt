@@ -1,0 +1,24 @@
+create database s;
+use s; 
+create table s(name varchar(20),rollno int not null,branch varchar(30));
+insert into s values("a",12,"Comp");
+insert into s values("b",3,"AI");
+insert into s values("c",5,"EXTC");
+insert into s values("d",25,"IT");
+select * from s;
+alter table s add city varchar(30);
+desc s;
+select * from s;
+alter table s drop city;
+desc s;
+update s set rollno=2 where name ="b";
+update s set rollno=1 where name="c";
+select * from s;
+select name from s;
+select branch from s;
+select * from s where name ="a";
+alter table s rename column rollno to roll_no;
+select * from s;
+Truncate table s;
+
+

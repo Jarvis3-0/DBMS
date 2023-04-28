@@ -1,0 +1,17 @@
+create database stu;
+create table stu(name varchar(30),rollno int ,branch varchar(30),city varchar(39),age int,marks int);
+desc stu;
+insert into stu values("Kumud",49,"Comp","Wadkhal",19,80);
+insert into stu values("Manish",50,"Comp","Mahad",21,75);
+insert into stu values("Swaraj",64,"AIDS","Pen",19,85);
+insert into stu values("Sanchit",64,"IT","Pen",19,90);
+select * from stu;
+select * from stu where city like 'Pen';
+select * from stu where city not like 'Pen';
+select * from stu where age like '19';
+select * from stu where age  not like '1_';
+select count(name) from stu;
+select sum(marks) as "Total of marks of student " from stu;
+select avg(marks) as "Avg of marks of student " from stu;
+select min(marks) as "min of marks of student " from stu;
+select max(marks) as "max of marks of student " from stu;

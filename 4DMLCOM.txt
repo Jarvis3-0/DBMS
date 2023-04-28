@@ -1,0 +1,16 @@
+show databases;
+use c;
+create table students(name varchar(30),rollno int , branch varchar(30));
+insert into students values("Sanchit ",39,"Comp");
+insert into students values("Kumud ",49,"Comp");
+insert into students values("Swaraj",64,"AIDS");
+insert into students values("Manish",123,"EXTC");
+select * from students;
+select name,roll no from students;
+select * from students where branch="Comp";
+update students set rollno=50 where name="Manish";
+select * from students;
+delete from students where branch="Comp";
+select * from students;
+
+
