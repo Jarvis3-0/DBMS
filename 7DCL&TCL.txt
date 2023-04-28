@@ -1,0 +1,27 @@
+select current_user();
+create database Anu;
+create table manager(name varchar(20),salary int not null);
+insert into manager values("Manish",5000);
+insert into manager values("Jayesh",6000);
+insert into manager values("Santosh",9000);
+select * from manager;
+select current_user();
+create user 'Munna'@'localhost' identified by 'aaa';
+grant select on manager to 'Munna'@'localhost';
+system mysql -u Munna -p
+select current_user();
+use anu;
+select * from manager;
+system mysql -u Kumud -p
+use anu;
+grant insert on manager to 'Munna'@'localhost';
+system mysql -u Munna -p
+select current_user();
+use anu;
+insert into manager values("Kunal",6000);
+select * from manager;
+system mysql -u Kumud -p
+use anu;
+revoke select on manager from 'Munna'@'localhost';
+select * from manager;
+commit;
